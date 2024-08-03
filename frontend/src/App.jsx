@@ -13,7 +13,7 @@ function App() {
     <div className="app">
       <div className="app-container">
         <div className="title">
-          Spelling Checker and Auto Aomplete App
+          Spelling Checker and Auto Complete App
         </div>
           <input type="text" value={fomrData} onChange={(e) => setFormData(e.target.value)} />
           <button onClick={handleSubmit}>Check</button>
