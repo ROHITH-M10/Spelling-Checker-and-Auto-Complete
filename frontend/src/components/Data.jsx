@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Chart } from "react-google-charts";
+import { Link } from "react-router-dom";
+import Home from "./Home";
 
 import "../App.css";
 
@@ -15,27 +18,35 @@ const Data = () => {
         );
     }, []); // Empty dependency array means this effect runs once on component mount
 
+    const data = [
+        ["Word", "Count"],
+        ...words.map((word) => [word.word, word.count]),
+    ];
+
+    const options = {
+        title: "Misspelled Words",
+        is3D: true,
+        backgroundColor: "white",
+        with: 400,
+        height: 500,
+        };
+
     return (
-        <div className="data">
-            <h1>Data</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Word</th>
-                        <th>Count</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {words.map((word) => (
-                        <tr key={word.hash}>
-                            <td>{word.word}</td>
-                            <td>{word.count}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
+            <div className="data">
+                <div className="data-nav">
+                        <Link to="/home" className="home-nav">
+                            Home
+                        </Link>
+                </div>
+                <div className="chart">
+                    <Chart
+                    chartType="PieChart"
+                    data={data}
+                    options={options}
+                    />
+                </div>
+            </div>
+  );
 };
 
 export default Data;
