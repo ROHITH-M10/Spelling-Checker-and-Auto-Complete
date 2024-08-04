@@ -84,7 +84,7 @@ CORS(app)
 # Ensure database connection is handled properly
 def get_db_connection():
     conn = sqlite3.connect('database.db')
-    conn.row_factory = sqlite3.Row
+    conn.row_factory = sqlite3.Row 
     return conn
 
 with get_db_connection() as conn:
