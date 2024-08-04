@@ -1,20 +1,20 @@
-import React from 'react';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
-import Home from './Home';
-import Data from './Data';
+import React from 'react'
+import './App.css';
+import Data from './components/Data';
+import Home from './components/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="data" element={<Data />} />
-        </Route>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/data' element={<Data />} />
+        
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
-
 export default App;

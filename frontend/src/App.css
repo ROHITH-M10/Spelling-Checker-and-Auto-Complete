@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.app{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.info-nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background-color: white;
+  margin: 15px;
+  border-radius: 5px;
+  color: black;
+}
+
+.app-container{
+
+}
+.title{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+input[type="text"]{
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: solid 2px #00d9ff;
+}
+input:focus{
+  outline: none;
+}
+
+.check-button{
+  width: 30%;
+  padding: 10px;
+  background-color: #10e333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: solid 2px #00d9ff;    
+}
+
+.check-button:hover{
+  background-color: #0ac335;
+}
+
+.result-box{
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.correct{
+  background-color: #10e333;
+  color: white;
+  padding: 10px;
+  display: inline;
+  border-radius: 5px;
+}
+.incorrect{
+  background-color: #ff0000;
+  color: white;
+  padding: 10px;
+  display: inline;
+  border-radius: 5px;
+}
+.suggestions-box{
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+.suggestions{
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #00d9ff;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+}
+.suggestions-text{
+  color: white;
+}
+.suggestions .item{
+  padding: 10px;
+}
+
+
+
+
+.data {
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #1d1d1d;
+}
